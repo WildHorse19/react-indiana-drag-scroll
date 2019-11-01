@@ -147,7 +147,7 @@ export default class ScrollContainer extends Component {
 
   onTouchMove = (e) => {
     const {nativeMobileScroll} = this.props
-    console.log('isNativeMobileScroll', nativeMobileScroll);
+    
     if (!nativeMobileScroll && this.pressed) {
       const touch = e.touches[0]
       if (touch) {
