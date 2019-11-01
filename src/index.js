@@ -147,6 +147,7 @@ export default class ScrollContainer extends Component {
 
   onTouchMove = (e) => {
     const {nativeMobileScroll} = this.props
+    console.log('isNativeMobileScroll', nativeMobileScroll);
     if (!nativeMobileScroll && this.pressed) {
       const touch = e.touches[0]
       if (touch) {
@@ -229,7 +230,7 @@ export default class ScrollContainer extends Component {
     }
   }
 
-  processMove(e, newClientX, newClientY) {
+  processMove(e, newClientY, newClientX) {
     const {
       horizontal, vertical, activationDistance, onScroll
     } = this.props
